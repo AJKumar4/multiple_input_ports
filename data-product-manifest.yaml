@@ -17,7 +17,7 @@ inputPorts:
     type: s3
     sourceUrn: urn:dv:datasource:fc403696-0d2b-40a8-8526-f2e6be449c9d
     entityId:
-      alias: car_prices_1
+      alias: car_prices
       createEntity: true
       type: s3-bucket
       entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_2022_csv/"
