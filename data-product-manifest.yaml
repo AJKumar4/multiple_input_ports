@@ -4,7 +4,7 @@ discoveryPort:
   name: Parquet file validation
   description: Test Parquet file run
   category: customer
-  image: http
+  image: http://google.com
   autofillUserinfo: true
   tags: []
   extra: {}
@@ -15,7 +15,7 @@ inputPorts:
     extra: {}
     syncType: pull
     type: s3
-    sourceUrn: urn:dv:datasource:1e401b2b-cdb7-4a82-98cd-5784f4568c9b
+    sourceUrn: urn:dv:datasource:fc403696-0d2b-40a8-8526-f2e6be449c9d
     entityId:
       alias: car_prices
       createEntity: true
