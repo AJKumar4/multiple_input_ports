@@ -35,8 +35,8 @@ inputPorts:
       actualTimeColumn:
         - created_date
       projection:
-        - '*'
-        
+        - legal_entity
+        - store_group_name
 stateManagement:
   alias: maf_pay_tx
   refreshInterval: 00 10 * * *
