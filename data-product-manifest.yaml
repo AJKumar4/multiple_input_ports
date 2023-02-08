@@ -51,4 +51,4 @@ stateManagement:
       changeTrackColumns:
         - nothing
 transformation:
-  sql: select * from maf_pay_tx
+  sql: select legal_entity, store_group_name from maf_pay_tx
