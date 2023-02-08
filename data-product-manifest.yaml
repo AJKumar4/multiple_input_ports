@@ -1,8 +1,8 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Maf Pay Tx CSV Demo
-  description: Maf pay transation demo
+  name: DP using Single CSV and simple query
+  description: SQL Query verfication
   category: customer
   image: http://google.com
   autofillUserinfo: true
