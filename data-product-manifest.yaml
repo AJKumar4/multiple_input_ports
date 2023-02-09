@@ -1,8 +1,8 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Verify Update time
-  description: Verify the updte time functionality
+  name: Verify Update Time
+  description: Verify Update time using new DP and webhook creation
   category: customer
   image: http://google.com
   autofillUserinfo: true
@@ -35,11 +35,11 @@ inputPorts:
       actualTimeColumn:
         - created_date
       projection:
-        - legal_entity
-        - store_group_name
+        - '*'
+        
 stateManagement:
   alias: maf_pay_tx
-  refreshInterval: * 10 * * *
+  refreshInterval: 00 8-10 * * *
   updateStrategy: append
   productStoreState:
     logicalSchemaUrn: urn:dv:schema:263deedb-916b-40f2-9740-6ee02ce9b8b9
@@ -51,4 +51,4 @@ stateManagement:
       changeTrackColumns:
         - nothing
 transformation:
-  sql: select legal_entity, store_group_name from maf_pay_tx
+  sql: select * from maf_pay_tx
