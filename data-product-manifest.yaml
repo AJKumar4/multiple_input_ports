@@ -39,7 +39,7 @@ inputPorts:
         
 stateManagement:
   alias: maf_pay_tx
-  refreshInterval: 15 8-17/3 * * 1-5
+  refreshInterval: 15 21 * * 1-5
   updateStrategy: append
   productStoreState:
     logicalSchemaUrn: urn:dv:schema:263deedb-916b-40f2-9740-6ee02ce9b8b9
