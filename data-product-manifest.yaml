@@ -1,8 +1,8 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Maf Pay Tx CSV Demo
-  description: Maf pay transation demo
+  name: Verify Update time 
+  description: Verify the updte time functionality
   category: customer
   image: http://google.com
   autofillUserinfo: true
