@@ -1,7 +1,7 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Verify Update Time
+  name: Verify Update Time using Webhooks
   description: Verify Update time using new DP and webhook creation
   category: customer
   image: http://google.com
