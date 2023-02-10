@@ -1,8 +1,8 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Verify Update Time
-  description: Verify Update time using new DP and webhook creation
+  name: Maf Pay Tx CSV Demo
+  description: Maf pay transation demo
   category: customer
   image: http://google.com
   autofillUserinfo: true
@@ -15,7 +15,7 @@ inputPorts:
     extra: {}
     syncType: pull
     type: s3
-    sourceUrn: urn:dv:datasource:6d74dee2-9bc1-4748-974c-abf95086c25f
+    sourceUrn: urn:dv:datasource:1e401b2b-cdb7-4a82-98cd-5784f4568c9b
     entityId:
       alias: maf_pay_tx
       createEntity: true
@@ -39,10 +39,20 @@ inputPorts:
         
 stateManagement:
   alias: maf_pay_tx
-  refreshInterval: 00 12 * * 1-5
+  refreshInterval: 00 10 * * *
   updateStrategy: append
   productStoreState:
-    logicalSchemaUrn: urn:dv:schema:263deedb-916b-40f2-9740-6ee02ce9b8b9
+    logicalSchema:  
+      type: object
+      properties:    
+        name:      
+          type: string
+        gender:      
+          type: string
+          enum: [Male, Female]    
+        age:      
+          type: number
+        required: [name, age] 
     retentionVersions: "10"
   updateStrategyOptions:
     - entityRef: urn:dv:datasource:6d4714c3
