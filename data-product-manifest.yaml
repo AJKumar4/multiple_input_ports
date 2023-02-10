@@ -1,8 +1,8 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Maf Pay Tx CSV Demo
-  description: Maf pay transation demo
+  name: update time using WebHooks
+  description: Webhook validations
   category: customer
   image: http://google.com
   autofillUserinfo: true
@@ -39,7 +39,7 @@ inputPorts:
         
 stateManagement:
   alias: maf_pay_tx
-  refreshInterval: 30 11 * * 1-5
+  refreshInterval: 30 11 * * *
   updateStrategy: append
   productStoreState:
     logicalSchema:  
