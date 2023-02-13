@@ -106,7 +106,6 @@ stateManagement:
           type: number
         required: [name, age] 
     retentionVersions: '10'
-    retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
     as dateOfBirth, coalesce(cust_nationality,'') as nationality, coalesce(cust_mobile,'')
