@@ -47,7 +47,7 @@ inputPorts:
         - buy_price_by_area
 stateManagement:
   alias: usersS3
-  refreshInterval: 00 10 * * *
+  refreshInterval: 00 10 * * 1-5
   updateStrategy: append
   productStoreState:
     logicalSchema:
