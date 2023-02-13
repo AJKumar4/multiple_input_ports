@@ -36,15 +36,8 @@ inputPorts:
       actualTimeColumn:
         - created_date
       projection:
-        - id
-        - title
-        - subtitle
-        - sq_mt_built
-        - sq_mt_useful
-        - rent_price
-        - rent_price_by_area
-        - buy_price
-        - buy_price_by_area
+        - legal_entity
+        - store_group_name
 stateManagement:
   alias: usersS3
   refreshInterval: 00 10 * * 1-5
@@ -53,37 +46,15 @@ stateManagement:
     logicalSchema:
       type: object
       properties:
-        id:
+        legal_entity:
           type: number
           description: ID of the property
-        title:
+        store_group_name:
           type: string
           description: Title of the property
-        subtitle:
-          type: string
-          description: Neighbourhood of the property
-        sq_mt_built:
-          type: string
-          description: Total built up area in square meters
-        sq_mt_useful:
-          type: string
-          description: Total carpet area in square meters
-        rent_price:
-          type: string
-          description: Total rental in Euros
-        rent_price_by_area:
-          type: string
-          description: Rental per square meters in Euros
-        buy_price:
-          type: string
-          description: Last sold price of the property in Euros
-        buy_price_by_area:
-          type: string
-          description: Last sold price per square meter of the property in Euros
       required:
-        - subtitle
-        - rent_price
-        - rent_price_by_area
+        - legal_entity
+        - store_group_name
     retentionVersions: "10"
   updateStrategyOptions:
     - entityRef: urn:dv:datasource:6d4714c3
