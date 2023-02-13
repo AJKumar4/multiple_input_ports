@@ -1,7 +1,7 @@
 # --- Data product definition template and documentation   --- #
 version: 0.0.1
 discoveryPort:
-  name: Consumption channel validation 
+  name: Consumption Channel testing with WebHooks
   description: A daliy updated product about CRF customer data. It consist of more
     than 20M records integrated from 5 different sources
   category: customer
@@ -16,7 +16,7 @@ inputPorts:
   extra: {}
   syncType: pull
   type: s3
-  sourceUrn: urn:dv:datasource:1e401b2b-cdb7-4a82-98cd-5784f4568c9b
+  sourceUrn: urn:dv:datasource:516d616a-c723-48b0-9a4a-b772094e0a81
   entityId:
     alias: customers
     createEntity: true
@@ -24,8 +24,8 @@ inputPorts:
     type: s3-bucket
     entityPath: s3a://mafh-analytics-data-ingestion/data-ingestion/prd/parsed/rtl_crf_dim_account/
     entityFilterPatternMatch: "*"
-    sourceSchemaUrn: "urn:dv:schema:9d4716d4"
-    projectSchemaUrn: "urn:dv:schema:9d4716d6"
+    sourceSchemaUrn: "urn:dv:schema:9d4716d6"
+    projectSchemaUrn: "urn:dv:schema:9d4716d4"
     fileFormat: csv
     delimiter: "|"
     filter: active_flag=1
@@ -70,7 +70,7 @@ inputPorts:
     - processing_time
     - file_name
 stateManagement:
-  refreshInterval: 44 10 * * *
+  refreshInterval: 53 10 * * *
   updateStrategy: SCD
   updateStrategyOptions:
   - entityRef: "${urn:dv:datasource:6d4714c3}:1"
@@ -94,17 +94,7 @@ stateManagement:
     - cust_last_name
     - country_key
   productStoreState:
-    logicalSchema:  
-      type: object
-      properties:    
-        name:      
-          type: string
-        gender:      
-          type: string
-          enum: [Male, Female]    
-        age:      
-          type: number
-        required: [name, age] 
+    logicalSchemaUrn: "${urn:dv:schema:e6161030-4c7f-4e8f-8508-f01e6547b00e}"
     retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
