@@ -62,3 +62,7 @@ stateManagement:
         - nothing
 transformation:
   sql: select * from maf_pay_tx
+outputPort:
+  channels:
+  - channelType: REST-API
+    queryType: SQL
