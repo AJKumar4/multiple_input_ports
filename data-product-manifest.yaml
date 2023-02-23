@@ -1,7 +1,7 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Maf Pay Tx CSV Demo
+  name: Maf Pay Tx CSV Demo Feb 23rd
   description: Maf pay transation demo
   category: customer
   image: http://google.com
